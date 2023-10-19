@@ -1,0 +1,42 @@
+package algorithm;
+
+import java.util.Set;
+
+public interface Graph {
+	/**
+	 * 
+	 * @param node - node which will be added to the graph
+	 * 
+	 */
+	public void addNode(int node);		
+	/**
+	 * 
+	 * @param a - starting node
+	 * @param b - ending node
+	 * @param weight - capacity for the edges
+	 */
+	public void addEdge(int a, int b, int weight);	
+	
+	/**
+	 * 
+	 * @return returns set of nodes
+	 */
+	public Set<Integer> getNodes();
+	
+	/**
+	 * 
+	 * @param node - from which the neighbors are selected
+	 * @return returns neighboring nodes
+	 */
+	
+    public Set<Integer> getNeighbors(int node);
+    
+    /**
+     * 
+     * @param a - start of the edge
+     * @param b - end of the edge
+     * @return returns weight of the edge
+     */
+    
+    public Integer getEdge(int a, int b);
+}
